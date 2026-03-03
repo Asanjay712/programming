@@ -1,0 +1,28 @@
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+       
+        list<int> l;
+        for(int i=0;i<m;i++){
+            //if(nums1[i]>0){
+            l.push_back(nums1[i]);
+           // }
+        }
+        for(int j=0;j<n;j++){
+           // if(nums2[j]>0){
+                l.push_back(nums2[j]);
+           // }
+        }
+l.sort();
+nums1.clear();
+        for(int num:l){
+            nums1.push_back(num);
+        }
+       
+    }
+    vector<int> merging(vector<int> &nums1,int m,vector<int> &nums2,int n){
+       
+        merge(nums1,m,nums2,n);
+        return nums1;
+    }
+};
